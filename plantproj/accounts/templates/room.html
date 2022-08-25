@@ -1,0 +1,35 @@
+{% extends 'main.html' %}
+<!-- Унаследовали шаблон -->
+
+<!-- Место где будет использоваться дочерний шаблон -->
+{% block content %}
+
+<div class="row">
+
+    <div class="col-md">
+        <hr>
+        <div class="card card-body">
+            <a class="btn btn-primary  btn-sm btn-block" href="">Create Room</a>
+            <table class="table table-sm">
+                <tr>
+                    <th>Num</th>
+                    <th>Name</th>
+                    <th>plant quantity</th>
+                </tr>
+                <!-- {% for fights in fights %}
+                <tr>
+                
+                    <td>{{fights.name}}</td>
+                    <td>{{fights.date_created}}</td>
+                    <td>{{fights.timewait}}</td>
+                    <td><a class="btn btn-sm btn-info" href="{% url 'update_mathes' fights.id %}">Update</a></td>
+                    <td><a class="btn btn-sm btn-info" href="{% url 'delete_mathes' fights.id %}">Delete</a></td>
+                </tr> -->
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}
