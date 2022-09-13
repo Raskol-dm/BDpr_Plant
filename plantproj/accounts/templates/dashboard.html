@@ -20,15 +20,13 @@
                     <th>Watering next</th>
                     <th>Condition</th>
                 </tr>
-                <!-- {% for fights in fights %}
+                {% for room in rooms %}
                 <tr>
-                
-                    <td>{{fights.name}}</td>
-                    <td>{{fights.date_created}}</td>
-                    <td>{{fights.timewait}}</td>
-                    <td><a class="btn btn-sm btn-info" href="{% url 'update_mathes' fights.id %}">Update</a></td>
-                    <td><a class="btn btn-sm btn-info" href="{% url 'delete_mathes' fights.id %}">Delete</a></td>
-                </tr> -->
+                    <td>{{room.rname}}</td>
+                    <td>{{room.is_active}}</td>
+                    <td>{{room.user_id}}</td>
+                    <td>{{room.plrelation[]}}</td>
+                </tr>
                 {% endfor %}
             </table>
         </div>

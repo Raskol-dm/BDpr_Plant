@@ -10,3 +10,9 @@ from .models import *
 class PlantsAdmin(admin.ModelAdmin):
     list_display = ['name', 'kind', 'height',
                     'complexity', 'lighting', 'waterfreq']
+
+
+@admin.register(Room)
+class RoomAdmin(admin.ModelAdmin):
+    list_display = ['rname', 'is_active', 'user_id']
+
