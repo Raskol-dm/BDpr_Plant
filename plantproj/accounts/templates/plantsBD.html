@@ -28,19 +28,20 @@
             <table class="table">
                 <tr>
                     <th>Name</th>
-                    <th>age</th>
-                    <td>rating</td>
-                    <td>club</td>
-                    <td>maintrainer</td>
+                    <th>Kind</th>
+                    <td>Height</td>
+                    <td>Complexity</td>
+                    <td>Lighting</td>
                 </tr>
-                {% for i in figters %}
-                <!-- <tr>
+                {% for i in plants %}
+                <tr>
                     <td>{{i.name}}</td>
-                    <td>{{i.age}}</td>
-                    <td>{{i.rating}}</td>
-                    <td>{{i.club}}</td>
-                    <td>{{i.maintrainer}}</td>
-                </tr> -->
+                    <td>{{i.kind}}</td>
+                    <td>{{i.height}}</td>
+                    <td>{{i.complexity}}</td>
+                    <td>{{i.lighting}}</td>
+                    <td><a class="btn btn-sm btn-info" href="a">Add</a></td>
+                </tr>
                 {% endfor %}
             </table>
         </div>

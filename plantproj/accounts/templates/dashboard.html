@@ -20,12 +20,16 @@
                     <th>Watering next</th>
                     <th>Condition</th>
                 </tr>
-                {% for room in rooms %}
+                {% for i in rooms %}
                 <tr>
-                    <td>{{room.rname}}</td>
-                    <td>{{room.is_active}}</td>
-                    <td>{{room.user_id}}</td>
-                    <td>{{room.plrelation[]}}</td>
+                    <td>{{i.rname}}</td>
+                    <td>{{i.is_active}}</td>
+                    <td>{{i.user_id}}</td>
+                    <td>
+                        {% for plant in i.plrelation.all %}
+                        {{ plant.name }},
+                        {% endfor %}
+                    </td>
                 </tr>
                 {% endfor %}
             </table>
