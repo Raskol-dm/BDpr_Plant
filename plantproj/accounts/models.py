@@ -1,3 +1,4 @@
+from pyexpat import model
 from django.db import models
 
 # Наша база данных
@@ -22,6 +23,7 @@ class Plants(models.Model):
     complexity = models.CharField(max_length=20,choices=COMPL)
     lighting = models.CharField(max_length=20, choices=LIGHT)
     waterfreq = models.SmallIntegerField()
+    # nextFreq = models.DateField() - для одного
 
     class Meta:
         ordering = ('name',)
@@ -37,6 +39,8 @@ class Room(models.Model):
     is_active = models.BooleanField(default=False)
     user_id = models.ForeignKey('auth.User', on_delete=models.CASCADE)
     plrelation = models.ManyToManyField(Plants)
+    # created = models.DateField(auto_now_add=True)
+    # upwaterfreq = models.DateField(auto_now=True)
 
     class Meta:
         ordering = ('user_id',)
@@ -51,3 +55,17 @@ class Room(models.Model):
 #     user = models.ForeignKey(
 #         to=User, on_delete=models.CASCADE, related_name='owner')
 #     plants = models.ManyToManyField(Plant, related_name='plants_rooms')
+
+class Watrlogs(models.Model):
+    room_id = models.ForeignKey('Room', on_delete=models.CASCADE)
+    pname_id = models.ForeignKey('Plants', on_delete=models.CASCADE)
+    created = models.DateField(auto_now_add=True)
+    upwaterfreq = models.DateField(auto_now=True)
+    nextwaterfreq = models.DateField(auto_now=True)
+
+    class Meta:
+        ordering = ('room_id',)
+        verbose_name = 'Журнал полива'
+        verbose_name_plural = 'Журнал поливов'
+
+

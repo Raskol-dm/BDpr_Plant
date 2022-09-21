@@ -32,6 +32,7 @@
                     <td>Height</td>
                     <td>Complexity</td>
                     <td>Lighting</td>
+                    <td>Watering</td>
                 </tr>
                 {% for i in plants %}
                 <tr>
@@ -40,6 +41,7 @@
                     <td>{{i.height}}</td>
                     <td>{{i.complexity}}</td>
                     <td>{{i.lighting}}</td>
+                    <td>{{i.waterfreq}}</td>
                     <td><a class="btn btn-sm btn-info" href="a">Add</a></td>
                 </tr>
                 {% endfor %}
