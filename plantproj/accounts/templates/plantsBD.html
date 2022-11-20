@@ -42,7 +42,7 @@
                     <td>{{i.complexity}}</td>
                     <td>{{i.lighting}}</td>
                     <td>{{i.waterfreq}}</td>
-                    <td><a class="btn btn-sm btn-info" href="a">Add</a></td>
+                    <td><a class="btn btn-sm btn-info" href="{% url 'plant_add' %}">Add</a></td>
                 </tr>
                 {% endfor %}
             </table>

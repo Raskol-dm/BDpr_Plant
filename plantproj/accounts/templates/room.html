@@ -20,12 +20,12 @@
                     <td>{{i.id}}</td>
                     <td>{{i.rname}}</td>
                     <td>{{i.plrelation.count}}</td>
-                    <td><a class="btn btn-sm btn-danger" href="">Delete</a></td>
+                    <td><a class="btn btn-sm btn-danger" href="{% url 'delete_room' %}">Delete</a></td>
                 </tr>
                 {% endfor %}
             </table>
         </div>
-        <a class="btn btn-primary  btn-sm btn-block" href="">Create Room</a>
+        <a class="btn btn-primary  btn-sm btn-block" href="{% url 'room_add' %}">Create Room</a>
     </div>
 
 </div>
