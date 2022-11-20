@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'accounts',
+    'django_filters'
 ]
 
 MIDDLEWARE = [
@@ -81,6 +82,30 @@ DATABASES = {
         'NAME': 'Plantsbook',
         'USER': 'postgres',
         'PASSWORD': '123cemD123',
+        'HOST': 'localhost',
+        'PORT': '5432'
+    },
+    'user': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'Plantsbook',
+        'USER': 'user',
+        'PASSWORD': '76user52',
+        'HOST': 'localhost',
+        'PORT': '5432'
+    },
+    'administration': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'Plantsbook',
+        'USER': 'administration',
+        'PASSWORD': '76admin52',
+        'HOST': 'localhost',
+        'PORT': '5432'
+    },
+    'moderator': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'Plantsbook',
+        'USER': 'moderator',
+        'PASSWORD': '76moder52',
         'HOST': 'localhost',
         'PORT': '5432'
     }

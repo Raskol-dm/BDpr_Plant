@@ -5,29 +5,27 @@
 {% block content %}
 
 <div class="row">
-
     <div class="col-md">
         <hr>
+        <h5>My Rooms</h5>
         <div class="card card-body">
-            <a class="btn btn-primary  btn-sm btn-block" href="">Create Room</a>
             <table class="table table-sm">
                 <tr>
                     <th>Num</th>
                     <th>Name</th>
-                    <th>plant quantity</th>
+                    <th>Plant_amount</th>
                 </tr>
-                <!-- {% for fights in fights %}
+                {% for i in rooms %}
                 <tr>
-                
-                    <td>{{fights.name}}</td>
-                    <td>{{fights.date_created}}</td>
-                    <td>{{fights.timewait}}</td>
-                    <td><a class="btn btn-sm btn-info" href="{% url 'update_mathes' fights.id %}">Update</a></td>
-                    <td><a class="btn btn-sm btn-info" href="{% url 'delete_mathes' fights.id %}">Delete</a></td>
-                </tr> -->
+                    <td>{{i.id}}</td>
+                    <td>{{i.rname}}</td>
+                    <td>{{i.plrelation.count}}</td>
+                    <td><a class="btn btn-sm btn-danger" href="{% url 'delete_room' %}">Delete</a></td>
+                </tr>
                 {% endfor %}
             </table>
         </div>
+        <a class="btn btn-primary  btn-sm btn-block" href="{% url 'room_add' %}">Create Room</a>
     </div>
 
 </div>
